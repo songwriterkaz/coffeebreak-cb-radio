@@ -15,6 +15,9 @@ button,input,select{font:inherit;border-radius:18px;border:0}input{padding:14px;
 #who{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:30px}.m{background:#fff;border-radius:14px;padding:6px 12px;font-weight:700}.m.lit{background:#1aa34a;color:#fff}
 #qr{margin:0 auto;width:108px;height:108px;background:#fff;padding:4px;border-radius:10px}#qr img,#qr canvas{width:100px!important;height:100px!important}
 .hide{display:none!important}small{font-size:14px;opacity:.8}footer{font-size:12px;opacity:.75;margin-top:auto;padding-top:10px}
+@media (min-width:1000px){body{font-size:24px}main{max-width:760px;background:#fff0f6;border-radius:28px;margin:24px auto;box-shadow:0 10px 40px #d6457a33;padding:24px 40px;min-height:auto}
+#qr{width:236px!important;height:236px!important;padding:8px}#qr img,#qr canvas{width:220px!important;height:220px!important}.kb{display:block!important}}
+.kb{display:none;font-size:15px;opacity:.7}.dev select{padding:10px;border-radius:14px;width:100%}
 </style></head><body><main>
 <header><img src="logo.png" alt="Coffeebreak"><h1>Coffeebreak CB Radio</h1></header>
 <section id="setup" class="hide"><p>Your name</p><input id="nm" maxlength="20" autocomplete="off"><p><button class="big" id="start">Start</button></p></section>
@@ -25,12 +28,12 @@ button,input,select{font:inherit;border-radius:18px;border:0}input{padding:14px;
 <div class="row"><button class="sm" id="onoff">Radio on</button><button class="sm" id="spk">Speaker on</button></div>
 <select id="chsel" style="padding:10px;border-radius:14px"><option value="p">Private channel</option></select>
 <small id="pubnote" class="hide">Anyone could join numbered channels.</small>
-<button class="big" id="share">Share my channel link</button>
+<div class="kb">Keyboard: Space to talk. M for speaker.</div><button class="big" id="devb" style="background:#f9c5da;color:#7a1f48">Mic and speakers</button><div id="pDev" class="hide dev" style="display:flex;flex-direction:column;gap:8px"><h2>Mic and speakers</h2><div>Microphone</div><select id="micsel"></select><div id="spkl">Speakers</div><select id="spksel"></select></div><button class="big" id="share">Share my channel link</button>
 <div id="qr"></div><small>Scan to join my channel</small>
 <div class="note" style="font-size:16px">Keep this open to hear the channel</div>
 </section>
-<footer>© Karen O'Brien (Coffeebreak). Karen O'Brien keeps all rights to this app, its design, name and logo. You may resell a physical phone you bought, but you may not copy this app or make your own version of it.<br><span style="opacity:.6">v1</span></footer>
+<footer>© Karen O'Brien (Coffeebreak). Karen O'Brien keeps all rights to this app, its design, name and logo. You may resell a physical phone you bought, but you may not copy this app or make your own version of it.<br><span style="opacity:.6">v2</span></footer>
 </main>
-<script src="core.js?v=1"></script><script>CB.V='1'</script><script src="radio.js?v=1"></script>
+<script src="core.js?v=2"></script><script>CB.V='2'</script><script src="radio.js?v=2"></script>
 <script src="qrcode.min.js" defer></script>
 </body></html>
