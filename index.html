@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#d6457a"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>Coffeebreak CB Radio</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.png">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#ffe4ef;color:#7a1f48;text-align:center;font-size:22px}
+main{max-width:480px;margin:0 auto;padding:14px 16px 8px;min-height:100vh;display:flex;flex-direction:column;gap:12px}
+header{display:flex;align-items:center;justify-content:center;gap:10px}header img{width:52px;height:52px;border-radius:12px}h1{font-size:24px;margin:0}
+#st{font-size:26px;font-weight:800;min-height:34px}#st.ok{color:#137a33}#note{font-size:18px;min-height:22px;color:#b0003a}
+button,input,select{font:inherit;border-radius:18px;border:0}input{padding:14px;border:2px solid #7a1f48;width:100%;font-size:22px;text-align:center}
+.big{padding:18px;font-size:26px;font-weight:800;color:#fff;background:#c2185b;width:100%}
+#talk{width:250px;height:250px;border-radius:50%;margin:6px auto;font-size:48px;font-weight:900;color:#fff;background:#d6457a;box-shadow:0 8px 0 #7a1f48}
+#talk.on{background:#d02b2b;box-shadow:0 0 0 14px #ff9aa8}
+.row{display:flex;gap:8px}.sm{flex:1;padding:14px 4px;font-size:19px;font-weight:700;background:#f9c5da;color:#7a1f48}.sm.on{background:#7a1f48;color:#fff}
+#who{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:30px}.m{background:#fff;border-radius:14px;padding:6px 12px;font-weight:700}.m.lit{background:#1aa34a;color:#fff}
+#qr{margin:0 auto;width:108px;height:108px;background:#fff;padding:4px;border-radius:10px}#qr img,#qr canvas{width:100px!important;height:100px!important}
+.hide{display:none!important}small{font-size:14px;opacity:.8}footer{font-size:12px;opacity:.75;margin-top:auto;padding-top:10px}
+</style></head><body><main>
+<header><img src="logo.png" alt="Coffeebreak"><h1>Coffeebreak CB Radio</h1></header>
+<section id="setup" class="hide"><p>Your name</p><input id="nm" maxlength="20" autocomplete="off"><p><button class="big" id="start">Start</button></p></section>
+<section id="app" class="hide" style="display:flex;flex-direction:column;gap:10px">
+<div id="me"></div><div id="chn" style="font-weight:700"></div><div id="st">Starting</div>
+<div id="who"></div>
+<button id="talk">TALK</button><div id="tip">Tap to talk</div><div id="note"></div>
+<div class="row"><button class="sm" id="onoff">Radio on</button><button class="sm" id="spk">Speaker on</button></div>
+<select id="chsel" style="padding:10px;border-radius:14px"><option value="p">Private channel</option></select>
+<small id="pubnote" class="hide">Anyone could join numbered channels.</small>
+<button class="big" id="share">Share my channel link</button>
+<div id="qr"></div><small>Scan to join my channel</small>
+<div class="note" style="font-size:16px">Keep this open to hear the channel</div>
+</section>
+<footer>© Karen O'Brien (Coffeebreak). Karen O'Brien keeps all rights to this app, its design, name and logo. You may resell a physical phone you bought, but you may not copy this app or make your own version of it.<br><span style="opacity:.6">v1</span></footer>
+</main>
+<script src="core.js?v=1"></script><script>CB.V='1'</script><script src="radio.js?v=1"></script>
+<script src="qrcode.min.js" defer></script>
+</body></html>
